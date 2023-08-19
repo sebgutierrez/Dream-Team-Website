@@ -9,33 +9,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
 	<div class="navbar" id="nav">
 		<div class="logo">
-			<h1>Dream Team</h1>
+			<span>Dream Team</span>
 		</div>
-		<input type="checkbox" id="nav-toggle" class="nav-toggle">
 		<nav class="nav-list-container">
 			<ul class="nav-list">
 				<li class="menu-item-container">
-					<a href="./index.html" class="menu-item" data-id="home">Home</a>
+					<a href="./index.html" class="menu-item" id="menu-item" data-id="home">Home</a>
 				</li>
 				<li class="menu-item-container">
-					<a href="./about.html" class="menu-item" data-id="about">About</a>
+					<a href="./about.html" class="menu-item" id="menu-item" data-id="about">About</a>
 				</li>
 				<li class="menu-item-container">
-					<a href="./team.html" class="menu-item" data-id="team">Team</a>
+					<a href="./team.html" class="menu-item" id="menu-item" data-id="team">Team</a>
 				</li>
 				<li class=" menu-item-container">
-					<a href="./projects.html" class="menu-item" data-id="projects">Projects</a>
+					<a href="./projects.html" class="menu-item" id="menu-item" data-id="projects">Projects</a>
 				</li>
 			</ul>
 		</nav>
+		<!--
 		<label for="nav-toggle" class="nav-toggle-label">
 			<span></span>
 		</label>
+		-->
 	</div>
 
 	<section class="section-team" id="team">
@@ -47,8 +49,7 @@
 								img/Vishu_DreamTeam-450.gif 768w,
 								img/Vishu_DreamTeam-600.gif 1024w,"        
 						class="person-img">
-				<h1 class="name">Vishu</h1>
-				<p class="description"></p>
+				<h1 class="name">Vishu (Team Lead)</h1>
 			</div>
 			<div class="team-member">
 				<img src="img/Dinh_DreamTeam-300.gif" 
@@ -57,7 +58,6 @@
 								img/Dinh_DreamTeam-600.gif 1024w,"        
 						class="person-img">
 				<h1 class="name">Dinh</h1>
-				<p class="description"></p>
 			</div>
 			<div class="team-member">
 				<img src="img/Jorge_DreamTeam-300.gif" 
@@ -66,7 +66,6 @@
 								img/Jorge_DreamTeam-600.gif 1024w,"        
 						class="person-img">
 				<h1 class="name">Jorge</h1>
-				<p class="description"></p>
 			</div>
 			<div class="team-member">
 				<img src="img/Karthic_DreamTeam-300.gif" 
@@ -75,7 +74,6 @@
 								img/Karthic_DreamTeam-600.gif 1024w,"        
 						class="person-img">
 				<h1 class="name">Karthik</h1>
-				<p class="description"></p>
 			</div>
 			<div class="team-member">
 				<img src="img/Richer_DreamTeam-300.gif" 
@@ -84,7 +82,6 @@
 								img/Richer_DreamTeam-600.gif 1024w,"        
 						class="person-img">
 				<h1 class="name">Richer</h1>
-				<p class="description"></p>
 			</div>
 			<div class="team-member">
 				<img src="img/Sebastian_DreamTeam-300.gif" 
@@ -93,7 +90,6 @@
 								img/Sebastian_DreamTeam-600.gif 1024w,"        
 						class="person-img">
 				<h1 class="name">Sebastian</h1>
-				<p class="description"></p>
 			</div>
 			<div class="team-member">
 				<img src="img/Jake_DreamTeam-300.gif" 
@@ -101,8 +97,7 @@
 								img/Jake_DreamTeam-450.gif 768w,
 								img/Jake_DreamTeam-600.gif 1024w,"        
 						class="person-img">
-				<h1 class="name">Jake</h1>
-				<p class="description"></p>
+				<h1 class="name">Jake (Team Lead)</h1>
 			</div>
 			<div class="team-member">
 				<img src="img/Justine_DreamTeam-300.gif" 
@@ -110,8 +105,7 @@
 								img/Justine_DreamTeam-450.gif 768w,
 								img/Justine_DreamTeam-600.gif 1024w,"        
 						class="person-img">
-				<h1 class="name">Justine</h1>
-				<p class="description"></p>
+				<h1 class="name">Justine (Team Lead)</h1>
 			</div>
 			<div class="team-member">
 				<img src="img/Fatema_DreamTeam-300.gif" 
@@ -120,13 +114,12 @@
 								img/Fatema_DreamTeam-600.gif 1024w,"        
 						class="person-img">
 				<h1 class="name">Fatema</h1>
-				<p class="description"></p>
 			</div>
+			<p class="pictures-not-included">Not pictured: Yury (Team Lead), Saalihah, and Madison</p>
 		</div>
 	</section>
 
 	<script src="script.js"></script>
-    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right" class="replit"></script>
 </body>
 
 </html>

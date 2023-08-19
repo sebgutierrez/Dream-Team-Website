@@ -15,143 +15,81 @@
 <body class="main-content">
         <div class="navbar" id="nav">
             <div class="logo">
-                <h1>Dream Team</h1>
+                <span>Dream Team</span>
             </div>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
             <nav class="nav-list-container">
                 <ul class="nav-list">
                     <li class="menu-item-container">
-                        <a href="./index.html" class="menu-item" data-id="home">Home</a>
+                        <a href="./index.html" class="menu-item" id="menu-item" data-id="home">Home</a>
                     </li>
                     <li class="menu-item-container">
-                        <a href="./about.html" class="menu-item" data-id="about">About</a>
+                        <a href="./about.html" class="menu-item" id="menu-item" data-id="about">About</a>
                     </li>
                     <li class="menu-item-container">
-                        <a href="./team.html" class="menu-item" data-id="team">Team</a>
+                        <a href="./team.html" class="menu-item" id="menu-item" data-id="team">Team</a>
                     </li>
                     <li class=" menu-item-container">
-                        <a href="./projects.html" class="menu-item" data-id="projects">Projects</a>
+                        <a href="./projects.html" class="menu-item" id="menu-item" data-id="projects">Projects</a>
                     </li>
                 </ul>
             </nav>
+            <!--
             <label for="nav-toggle" class="nav-toggle-label">
                 <span></span>
             </label>
+            -->
         </div>
     <main>
         <section class="section-home active" id="home">
-            <script src="three.min.js"></script>
-            <script src="postprocessing.min.js"></script>
-            <div class="canvas-envelope">
-                <script>
-                    let scene, camera, cloudParticles = [], composer;
-
-                    function init() {
-                        scene = new THREE.Scene();
-                        camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
-                        camera.position.z = 1;
-                        camera.rotation.x = 1.16;
-                        camera.rotation.y = -0.12;
-                        camera.rotation.z = 0.27;
-
-                        let ambient = new THREE.AmbientLight(0x2191FB);
-                        scene.add(ambient);
-
-                        let directionalLight = new THREE.DirectionalLight(0xFF6B6B);
-                        directionalLight.position.set(0, 0, 1);
-                        scene.add(directionalLight);
-
-                        let orangeLight = new THREE.PointLight(0x2181fa, 50, 350, 1.7);
-                        orangeLight.position.set(200, 300, 100);
-                        scene.add(orangeLight);
-                        let redLight = new THREE.PointLight(0x00b6ff, 50, 250, 1.7);
-                        redLight.position.set(100, 300, 100);
-                        scene.add(redLight);
-                        let blueLight = new THREE.PointLight(0x00deed, 50, 350, 1.7);
-                        blueLight.position.set(300, 300, 200);
-                        scene.add(blueLight);
-
-                        renderer = new THREE.WebGLRenderer();
-                        renderer.setSize(window.innerWidth, window.innerHeight);
-                        scene.fog = new THREE.FogExp2(0x03544e, 0.001);
-                        renderer.setClearColor(scene.fog.color);
-                        document.body.appendChild(renderer.domElement);
-
-                        let loader = new THREE.TextureLoader();
-                        loader.load("cloud.png", function (texture) {
-                            cloudGeo = new THREE.PlaneBufferGeometry(500, 500);
-                            cloudMaterial = new THREE.MeshLambertMaterial({
-                                map: texture,
-                                transparent: true
-                            });
-
-                            for (let p = 0; p < 50; p++) {
-                                let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
-                                cloud.position.set(
-                                    Math.random() * 800 - 400,
-                                    200,
-                                    Math.random() * 500 - 500
-                                );
-                                cloud.rotation.x = 1.16;
-                                cloud.rotation.y = -0.12;
-                                cloud.rotation.z = Math.random() * 2 * Math.PI;
-                                cloud.material.opacity = 0.55;
-                                cloudParticles.push(cloud);
-                                scene.add(cloud);
-                            }
-                        });
-                        loader.load("stars.jpg", function (texture) {
-
-                            const textureEffect = new POSTPROCESSING.TextureEffect({
-                                blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
-                                texture: texture
-                            });
-                            textureEffect.blendMode.opacity.value = 0.2;
-
-                            const bloomEffect = new POSTPROCESSING.BloomEffect({
-                                blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
-                                kernelSize: POSTPROCESSING.KernelSize.SMALL,
-                                useLuminanceFilter: true,
-                                luminanceThreshold: 0.3,
-                                luminanceSmoothing: 0.75
-                            });
-                            bloomEffect.blendMode.opacity.value = 1.5;
-
-                            let effectPass = new POSTPROCESSING.EffectPass(
-                                camera,
-                                bloomEffect,
-                                textureEffect
-                            );
-                            effectPass.renderToScreen = true;
-
-                            composer = new POSTPROCESSING.EffectComposer(renderer);
-                            composer.addPass(new POSTPROCESSING.RenderPass(scene, camera));
-                            composer.addPass(effectPass);
-
-                            window.addEventListener("resize", onWindowResize, false);
-                            render();
-                        });
-                    }
-                    function onWindowResize() {
-                        camera.aspect = window.innerWidth / window.innerHeight;
-                        camera.updateProjectionMatrix();
-                        renderer.setSize(window.innerWidth, window.innerHeight);
-                    }
-                    function render() {
-                        cloudParticles.forEach(p => {
-                            p.rotation.z -= 0.001;
-                        });
-                        composer.render(0.1);
-                        requestAnimationFrame(render);
-                    }
-                    init();
-                </script>
-            </div>
+            <svg class="cloud-layer-1" preserveAspectRatio="none" viewBox="0 0 776 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.500003 0C7.26308 -6.49889e-08 13.9599 1.07343 20.2082 3.159C26.4565 5.24457 32.1338 8.30144 36.916 12.1551C41.6982 16.0087 45.4917 20.5836 48.0798 25.6186C50.6679 30.6537 52 36.0501 52 41.5C52 46.9499 50.6679 52.3464 48.0798 57.3814C45.4917 62.4164 41.6982 66.9913 36.916 70.8449C32.1338 74.6986 26.4565 77.7554 20.2082 79.841C13.9599 81.9266 7.26308 83 0.5 83L0.500003 0Z" fill="white"/>
+                <path d="M775.5 0C768.737 -6.49889e-08 762.04 1.07343 755.792 3.159C749.544 5.24457 743.866 8.30144 739.084 12.1551C734.302 16.0087 730.508 20.5836 727.92 25.6186C725.332 30.6537 724 36.0501 724 41.5C724 46.9499 725.332 52.3464 727.92 57.3814C730.508 62.4164 734.302 66.9913 739.084 70.8449C743.866 74.6986 749.544 77.7554 755.792 79.841C762.04 81.9266 768.737 83 775.5 83V0Z" fill="white"/>
+                <path d="M1 45H775V83H1V45Z" fill="white"/>
+                <path d="M123 41.5C123 64.4198 101.957 83 76 83C50.0426 83 29 64.4198 29 41.5C29 18.5802 50.0426 0 76 0C101.957 0 123 18.5802 123 41.5Z" fill="white"/>
+                <path d="M193 41.5C193 64.4198 171.957 83 146 83C120.043 83 99 64.4198 99 41.5C99 18.5802 120.043 0 146 0C171.957 0 193 18.5802 193 41.5Z" fill="white"/>
+                <path d="M262 41.5C262 64.4198 240.957 83 215 83C189.043 83 168 64.4198 168 41.5C168 18.5802 189.043 0 215 0C240.957 0 262 18.5802 262 41.5Z" fill="white"/>
+                <path d="M334 41.5C334 64.4198 312.957 83 287 83C261.043 83 240 64.4198 240 41.5C240 18.5802 261.043 0 287 0C312.957 0 334 18.5802 334 41.5Z" fill="white"/>
+                <path d="M401 41.5C401 64.4198 379.957 83 354 83C328.043 83 307 64.4198 307 41.5C307 18.5802 328.043 0 354 0C379.957 0 401 18.5802 401 41.5Z" fill="white"/>
+                <path d="M470 41.5C470 64.4198 448.957 83 423 83C397.043 83 376 64.4198 376 41.5C376 18.5802 397.043 0 423 0C448.957 0 470 18.5802 470 41.5Z" fill="white"/>
+                <path d="M540 41.5C540 64.4198 518.957 83 493 83C467.043 83 446 64.4198 446 41.5C446 18.5802 467.043 0 493 0C518.957 0 540 18.5802 540 41.5Z" fill="white"/>
+                <path d="M609 41.5C609 64.4198 587.957 83 562 83C536.043 83 515 64.4198 515 41.5C515 18.5802 536.043 0 562 0C587.957 0 609 18.5802 609 41.5Z" fill="white"/>
+                <path d="M679 41.5C679 64.4198 657.957 83 632 83C606.043 83 585 64.4198 585 41.5C585 18.5802 606.043 0 632 0C657.957 0 679 18.5802 679 41.5Z" fill="white"/>
+                <path d="M751 41.5C751 64.4198 729.957 83 704 83C678.043 83 657 64.4198 657 41.5C657 18.5802 678.043 0 704 0C729.957 0 751 18.5802 751 41.5Z" fill="white"/>
+            </svg>
+            <svg class="cloud-layer-2" preserveAspectRatio="none" viewBox="0 0 776 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.500003 0C7.26308 -6.49889e-08 13.9599 1.07343 20.2082 3.159C26.4565 5.24457 32.1338 8.30144 36.916 12.1551C41.6982 16.0087 45.4917 20.5836 48.0798 25.6186C50.6679 30.6537 52 36.0501 52 41.5C52 46.9499 50.6679 52.3464 48.0798 57.3814C45.4917 62.4164 41.6982 66.9913 36.916 70.8449C32.1338 74.6986 26.4565 77.7554 20.2082 79.841C13.9599 81.9266 7.26308 83 0.5 83L0.500003 0Z" fill="#CFF9FF"/>
+                <path d="M775.5 0C768.737 -6.49889e-08 762.04 1.07343 755.792 3.159C749.544 5.24457 743.866 8.30144 739.084 12.1551C734.302 16.0087 730.508 20.5836 727.92 25.6186C725.332 30.6537 724 36.0501 724 41.5C724 46.9499 725.332 52.3464 727.92 57.3814C730.508 62.4164 734.302 66.9913 739.084 70.8449C743.866 74.6986 749.544 77.7554 755.792 79.841C762.04 81.9266 768.737 83 775.5 83V0Z" fill="#CFF9FF"/>
+                <path d="M1 45H775V83H1V45Z" fill="#CFF9FF"/>
+                <path d="M123 41.5C123 64.4198 101.957 83 76 83C50.0426 83 29 64.4198 29 41.5C29 18.5802 50.0426 0 76 0C101.957 0 123 18.5802 123 41.5Z" fill="#CFF9FF"/>
+                <path d="M193 41.5C193 64.4198 171.957 83 146 83C120.043 83 99 64.4198 99 41.5C99 18.5802 120.043 0 146 0C171.957 0 193 18.5802 193 41.5Z" fill="#CFF9FF"/>
+                <path d="M262 41.5C262 64.4198 240.957 83 215 83C189.043 83 168 64.4198 168 41.5C168 18.5802 189.043 0 215 0C240.957 0 262 18.5802 262 41.5Z" fill="#CFF9FF"/>
+                <path d="M334 41.5C334 64.4198 312.957 83 287 83C261.043 83 240 64.4198 240 41.5C240 18.5802 261.043 0 287 0C312.957 0 334 18.5802 334 41.5Z" fill="#CFF9FF"/>
+                <path d="M401 41.5C401 64.4198 379.957 83 354 83C328.043 83 307 64.4198 307 41.5C307 18.5802 328.043 0 354 0C379.957 0 401 18.5802 401 41.5Z" fill="#CFF9FF"/>
+                <path d="M470 41.5C470 64.4198 448.957 83 423 83C397.043 83 376 64.4198 376 41.5C376 18.5802 397.043 0 423 0C448.957 0 470 18.5802 470 41.5Z" fill="#CFF9FF"/>
+                <path d="M540 41.5C540 64.4198 518.957 83 493 83C467.043 83 446 64.4198 446 41.5C446 18.5802 467.043 0 493 0C518.957 0 540 18.5802 540 41.5Z" fill="#CFF9FF"/>
+                <path d="M609 41.5C609 64.4198 587.957 83 562 83C536.043 83 515 64.4198 515 41.5C515 18.5802 536.043 0 562 0C587.957 0 609 18.5802 609 41.5Z" fill="#CFF9FF"/>
+                <path d="M679 41.5C679 64.4198 657.957 83 632 83C606.043 83 585 64.4198 585 41.5C585 18.5802 606.043 0 632 0C657.957 0 679 18.5802 679 41.5Z" fill="#CFF9FF"/>
+                <path d="M751 41.5C751 64.4198 729.957 83 704 83C678.043 83 657 64.4198 657 41.5C657 18.5802 678.043 0 704 0C729.957 0 751 18.5802 751 41.5Z" fill="#CFF9FF"/>
+            </svg>
+            <svg class="cloud-layer-3" preserveAspectRatio="none" viewBox="0 0 776 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.500003 0C7.26308 -6.49889e-08 13.9599 1.07343 20.2082 3.159C26.4565 5.24457 32.1338 8.30144 36.916 12.1551C41.6982 16.0087 45.4917 20.5836 48.0798 25.6186C50.6679 30.6537 52 36.0501 52 41.5C52 46.9499 50.6679 52.3464 48.0798 57.3814C45.4917 62.4164 41.6982 66.9913 36.916 70.8449C32.1338 74.6986 26.4565 77.7554 20.2082 79.841C13.9599 81.9266 7.26308 83 0.5 83L0.500003 0Z" fill="#C0D7FF"/>
+                <path d="M775.5 0C768.737 -6.49889e-08 762.04 1.07343 755.792 3.159C749.544 5.24457 743.866 8.30144 739.084 12.1551C734.302 16.0087 730.508 20.5836 727.92 25.6186C725.332 30.6537 724 36.0501 724 41.5C724 46.9499 725.332 52.3464 727.92 57.3814C730.508 62.4164 734.302 66.9913 739.084 70.8449C743.866 74.6986 749.544 77.7554 755.792 79.841C762.04 81.9266 768.737 83 775.5 83V0Z" fill="#C0D7FF"/>
+                <path d="M1 45H775V83H1V45Z" fill="#C0D7FF"/>
+                <path d="M123 41.5C123 64.4198 101.957 83 76 83C50.0426 83 29 64.4198 29 41.5C29 18.5802 50.0426 0 76 0C101.957 0 123 18.5802 123 41.5Z" fill="#C0D7FF"/>
+                <path d="M193 41.5C193 64.4198 171.957 83 146 83C120.043 83 99 64.4198 99 41.5C99 18.5802 120.043 0 146 0C171.957 0 193 18.5802 193 41.5Z" fill="#C0D7FF"/>
+                <path d="M262 41.5C262 64.4198 240.957 83 215 83C189.043 83 168 64.4198 168 41.5C168 18.5802 189.043 0 215 0C240.957 0 262 18.5802 262 41.5Z" fill="#C0D7FF"/>
+                <path d="M334 41.5C334 64.4198 312.957 83 287 83C261.043 83 240 64.4198 240 41.5C240 18.5802 261.043 0 287 0C312.957 0 334 18.5802 334 41.5Z" fill="#C0D7FF"/>
+                <path d="M401 41.5C401 64.4198 379.957 83 354 83C328.043 83 307 64.4198 307 41.5C307 18.5802 328.043 0 354 0C379.957 0 401 18.5802 401 41.5Z" fill="#C0D7FF"/>
+                <path d="M470 41.5C470 64.4198 448.957 83 423 83C397.043 83 376 64.4198 376 41.5C376 18.5802 397.043 0 423 0C448.957 0 470 18.5802 470 41.5Z" fill="#C0D7FF"/>
+                <path d="M540 41.5C540 64.4198 518.957 83 493 83C467.043 83 446 64.4198 446 41.5C446 18.5802 467.043 0 493 0C518.957 0 540 18.5802 540 41.5Z" fill="#C0D7FF"/>
+                <path d="M609 41.5C609 64.4198 587.957 83 562 83C536.043 83 515 64.4198 515 41.5C515 18.5802 536.043 0 562 0C587.957 0 609 18.5802 609 41.5Z" fill="#C0D7FF"/>
+                <path d="M679 41.5C679 64.4198 657.957 83 632 83C606.043 83 585 64.4198 585 41.5C585 18.5802 606.043 0 632 0C657.957 0 679 18.5802 679 41.5Z" fill="#C0D7FF"/>
+                <path d="M751 41.5C751 64.4198 729.957 83 704 83C678.043 83 657 64.4198 657 41.5C657 18.5802 678.043 0 704 0C729.957 0 751 18.5802 751 41.5Z" fill="#C0D7FF"/>
+            </svg>
         </section>
     </main>
 
     <script src="script.js"></script>
-    <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right" class="replit"></script>
 </body>
 
 </html>

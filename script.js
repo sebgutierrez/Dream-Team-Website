@@ -1,11 +1,8 @@
-const sections = document.querySelectorAll('section'); // select each section (page)
-const navBtns = document.querySelectorAll('nav-list'); // select parent container of buttons
-const navItemBtn = document.querySelectorAll('.menu-item-container'); // select each individual buttons
-const allSections = document.querySelector('.main-content') // select all sections in webpage
-const toggle = document.querySelector('.menu-toggle'); 
-var navbars = document.querySelectorAll('.navbar');
 
-// Sections Active
+const navBtns = document.querySelectorAll('nav-list'); // select parent container of buttons
+const allSections = document.querySelector('.main-content'); // select all sections in webpage
+
+// Sections Active (code for single page website scroll)
 
 // "target" refers to element where the event occured & "dataset" refers to data-id element 
 /*
@@ -28,7 +25,6 @@ function PageTransitions() {
       });
 
       // Adds the "active" class to the section with the corresponding id using 
-      // document.getElementById(id).classList.add('active').
       const element = document.getElementById(id);
       element.classList.add('active');
 
@@ -41,6 +37,8 @@ function PageTransitions() {
 
 PageTransitions();*/
 
+const toggle = document.querySelector('.menu-toggle'); 
+var navbars = document.querySelectorAll('.navbar');
 var hideScroll = window.scrollY;
 
 window.onscroll = function() {
@@ -62,3 +60,28 @@ window.onscroll = function() {
 
   hideScroll = currentScrollPos;
 };
+
+const navItemBtns = document.querySelectorAll('.menu-item-container'); 
+const navPages = document.querySelectorAll(".menu-item");
+let currentURL = window.location.href;
+
+function btnHighlighs (){
+  // Removes the "menu-item-container-style" class from all buttons in the navItemBtns array using the forEach method.
+  navItemBtns.forEach((btn) => {
+    btn.classList.remove('menu-item-container-style');
+  });
+
+  navPages.forEach((page) => {
+    let navPage = page.dataset.id;
+    if(currentURL.includes("index") && navPage == "home"){
+      let parent = page.parentElement;
+      parent.classList.add('menu-item-container-style');
+    }
+    else if(currentURL.includes(navPage)){
+      let parent = page.parentElement;
+      parent.classList.add('menu-item-container-style');
+    }
+  });
+}
+
+btnHighlighs();
