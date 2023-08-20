@@ -20,6 +20,27 @@ scroll-snap-type: block proximity;
   --box-shadow: 0.5rem 0.5rem 0.5rem black;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #323456;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7E7BFF;
+  border-radius: 0.25rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3E3C98;
+}
+
 section{
 height: 100vh;
 }
@@ -217,7 +238,7 @@ flex-wrap: wrap;
 flex-direction: row;
 align-items: space-evenly;
 justify-content: space-evenly;
-padding: 7rem 4rem 4rem 4rem;
+padding: 5rem 4rem 4rem 4rem;
 }
 
 .team-member {
