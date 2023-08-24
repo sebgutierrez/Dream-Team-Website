@@ -58,78 +58,78 @@ html, body{
 }
 
 section{
-height: 100vh;
+  height: 100vh;
 }
 
 /* navigation bar section starts here */
 
 .navbar {
-position: fixed;
-top: 0;
-padding: 1rem;
-width: 100%;
-display: flex;
-transition: top 0.3s;
-background-color: var(--theme-background-color);
-z-index: 3;
+  position: fixed;
+  top: 0;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  transition: top 0.3s;
+  background-color: var(--theme-background-color);
+  z-index: 3;
 }
 
 .logo { 
-width: 50vw;
-padding: 1rem 0 0 1rem;
+  width: 50vw;
+  padding: 1rem 0 0 1rem;
 }
 
 .logo span{
-color: white;
-font-size: 2rem;
-font-weight: bold;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .nav-list-container {
-width: fit-content;
-background-color: var(--theme-navbar-color);
-border-radius: 5rem;
+  width: fit-content;
+  background-color: var(--theme-navbar-color);
+  border-radius: 5rem;
 }
 
 .nav-list {
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-padding: 0 1rem 0 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
 }
 
 .menu-item-container {
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 0.5rem 0 0.5rem 0;
-padding: 0.5rem 3rem 0.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem 3rem 0.5rem 3rem;
 }
 
 .menu-item-container:hover {
-background-color: var(--theme-navbar-highlight-color);
-border-radius: 5rem;
+  background-color: var(--theme-navbar-highlight-color);
+  border-radius: 5rem;
 }
 
 .menu-item-container-style {
-background-color: var(--theme-navbar-highlight-color);
-border-radius: 5rem;
+  background-color: var(--theme-navbar-highlight-color);
+  border-radius: 5rem;
 }
 
 .menu-item-container a{
-text-decoration: none;
+  text-decoration: none;
 }
 
 .menu-item{
-display: flex;
-cursor: pointer;
-color: white;
-font-size: 1.5rem;
-font-weight: bold;
+  display: flex;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .nav-toggle {
-display: none;
+  display: none;
 }
 
 .night-theme-icon {
@@ -157,25 +157,25 @@ display: none;
 }
 
 .section-home{
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: var(--theme-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--theme-background-color);
 }
 
 .clouds {
-display: flex;
-height: 100%;
-width: 100%;
-flex-direction: column-reverse;  
-justify-content: end;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column-reverse;  
+  justify-content: end;
 }
 
 .cloud-layer-1 {
-position: absolute;
-background-size: 100% 100%;
-bottom: -1rem;
-z-index: 2;
+  position: absolute;
+  background-size: 100% 100%;
+  bottom: -1rem;
+  z-index: 2;
 }
 
 .cloud-layer-1-path {
@@ -183,10 +183,10 @@ z-index: 2;
 }
 
 .cloud-layer-2 {
-position: absolute;
-background-size: 100% 100%;
-bottom: 3rem;
-z-index: 1;
+  position: absolute;
+  background-size: 100% 100%;
+  bottom: 3rem;
+  z-index: 1;
 }
 
 .cloud-layer-2-path {
@@ -194,10 +194,10 @@ z-index: 1;
 }
 
 .cloud-layer-3 {
-position: absolute;
-background-size: 100% 100%;
-bottom: 7rem;
-z-index: 0;
+  position: absolute;
+  background-size: 100% 100%;
+  bottom: 7rem;
+  z-index: 0;
 }
 
 .cloud-layer-3-path {
@@ -209,23 +209,23 @@ z-index: 0;
 /* section about starts here */
 
 .section-about {
-background-color: var(--theme-background-color);
-min-height: 100vh;
+  background-color: var(--theme-background-color);
+  min-height: 100vh;
 }
 
 .about-container {
-text-align: left;
-top: 20%;
-position: relative;
-display: flex;
-flex-direction: column;
-padding: 0 5rem 0 5rem;
+  text-align: left;
+  top: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem 0 5rem;
 }
 
 .about-description{
-color: white;
-font-size: 2.25rem;
-font-weight: bold;
+  color: white;
+  font-size: 2.25rem;
+  font-weight: bold;
 }
 
 @media (max-width: 1024px){
@@ -245,34 +245,34 @@ font-weight: bold;
 }
 
 .code-coogs-1 {
-color: #75E4FF;
+  color: #75E4FF;
 }
 
 .code-coogs-2 {
-color: #CF6679;
+  color: #CF6679;
 }
 
 .coogs-button {
-top: 1rem;
-position: relative;
-display: flex;
-margin: auto;
-background-color: var(--theme-navbar-color);
-border: none;
-border-radius: 5rem;
-padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+  top: 1rem;
+  position: relative;
+  display: flex;
+  margin: auto;
+  background-color: var(--theme-navbar-color);
+  border: none;
+  border-radius: 5rem;
+  padding: 1.5rem 2.5rem 1.5rem 2.5rem;
 }
 
 .coogs-button:hover {
-background-color: var(theme-navbar-highlight-color);
+  background-color: var(theme-navbar-highlight-color);
 }
 
 .coogs-button a{
-text-decoration: none;
-color: white;
-font-size: 1.5rem;
-font-weight: bold;
-cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* section about ends here */
@@ -280,108 +280,148 @@ cursor: pointer;
 /* section team starts here */
 
 .section-team {
-background-color: var(--theme-background-color);
-height: fit-content;
+  background-color: var(--theme-background-color);
+  height: fit-content;
 }
 
 .team-grid-columns {
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-align-items: space-evenly;
-justify-content: space-evenly;
-padding: 5rem 4rem 4rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
 }
 
 .team-member {
-display: flex;
-flex-direction: column;
-align-items: center;
-flex-basis: 30%;
-padding: 3rem 0 1rem 0;
-background-color: var(--theme-navbar-color);
-margin: 1rem;
-}
-
-.team-member .name {
-padding-top: 1rem;
-font-size: 1.5rem;
-font-weight: bold;
-text-align: center;
-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 30%;
+  padding: 4rem 0 1rem 0;
+  background-color: var(--theme-navbar-color);
+  margin: 1rem;
 }
 
 .team-member .person-img {
-width: 60%;
-}
-
-.team-member .description {
-color: white;
-}
-
-.pictures-not-included {
-padding-top: 1rem;
-font-size: 1.5rem;
-font-weight: bold;
-text-align: center;
-color: white;
-}
-
-@media (max-width: 480px) {
-
-.team-grid-columns {
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.team-member {
-  width: 65%;
-  padding: 0.5rem;
+  width: 70%;
 }
 
 .team-member .name {
-  font-size: 1rem;
-  padding-top: 0.5rem;
+  padding-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
 }
 
 .pictures-not-included {
-  font-size: 1rem;
-}
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
 }
 
-@media (min-width: 481px) and (max-width: 786px){
+@media (max-width: 487px) {
 
-.team-member {
-  flex-basis: 33.33%;
-  padding: 1rem;
+  .team-grid-columns {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .team-member {
+    flex-basis: 80%;
+    padding: 2.5rem 0 1rem 0;
+  }
+
+  .team-member .person-img {
+    width: 70%;
+  }
+  
+  .pictures-not-included {
+    font-size: 1rem;
+  }
+
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+  .team-grid-columns {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .team-member {
+    flex-basis: 40%;
+    padding: 3rem 0 1rem 0;
+  }
+
+  .team-member .person-img {
+    width: 70%;
+  }
+
+  .pictures-not-included {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1090px){
+  
+  .team-grid-columns {
+    padding: 1.5rem;
+  }
+
+  .team-member {
+    padding: 2rem 0 0.5rem 0;
+    margin: 0.75rem;
+  }
+
+  .team-member .person-img {
+    width: 70%;
+  }
+
+  .team-member .name {
+    font-size: 1rem;
+  }
+
+  .pictures-not-included {
+    font-size: 1rem;
+  }
+
 }
 /* section team ends here */
 
 /* section projects starts here */
 
 .section-projects{  
-background-color: var(--theme-background-color);
-height: 100vh;
+  background-color: var(--theme-background-color);
+  height: 100vh;
 }
 
 .projects {
-position: relative;
-top: 20vh;
-display: flex;
+  position: relative;
+  top: 20vh;
+  display: flex;
 }
 
 .project-1 {
-flex-basis: 50%;
-margin: 0 0 0 12rem;
+  flex-basis: 50%;
+  margin: 0 0 0 12rem;
 }
 
 .project-2 {
-flex-basis: 50%;
-margin: 0 12rem 0 12rem;
+  flex-basis: 50%;
+  margin: 0 12rem 0 12rem;
 }
 
 @media (max-width: 1024px){
@@ -415,64 +455,64 @@ margin: 0 12rem 0 12rem;
 }
 
 .project-card {
-display: none;
-background-color: var(--theme-navbar-color);
-border-radius: 5rem;
-padding: 1.5rem 4rem 2.75rem 4rem;
+  display: none;
+  background-color: var(--theme-navbar-color);
+  border-radius: 5rem;
+  padding: 1.5rem 4rem 2.75rem 4rem;
 }
 
 .project-cloud {
-position: relative;
-width: 100%;
-z-index: 1;
-top: -2rem;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  top: -2rem;
 }
 
 .project-cloud:hover {
-display: none;
+  display: none;
 }
 
 .project-cloud:hover + .project-card {
-display: block;
+  display: block;
 }
 
 .project-cloud:hover + .github-button {
-cursor: pointer;
+  cursor: pointer;
 }
 
 .project-name {
-position: relative;
-font-size: 2rem;
-font-weight: bold;
-color: black;
-z-index: 0;
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  z-index: 0;
 }
 
 .project-description{
-font-size: 0.75rem;
-font-weight: bold;
-color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: white;
 }
 
 .github-button {
-position: relative;
-top: 0.7rem;
-margin: auto;
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: white;
-border: none;
-border-radius: 5rem;
-padding: 0.2rem 1rem 0.2rem 1rem;
+  position: relative;
+  top: 0.7rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: none;
+  border-radius: 5rem;
+  padding: 0.2rem 1rem 0.2rem 1rem;
 }
 
 .github-link {
-font-size: 1rem;
-font-weight: bold;
-color: black;
-margin-left: 0.5rem;
-cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  margin-left: 0.5rem;
+  cursor: pointer;
 }
 
 /* section projects ends here */
