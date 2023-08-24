@@ -1,59 +1,52 @@
 
-const navBtns = document.querySelectorAll('nav-list'); // select parent container of buttons
-const allSections = document.querySelector('.main-content'); // select all sections in webpage
+var root = document.querySelector(':root');
+var theme = document.getElementById('theme-switch');
 
-// Sections Active (code for single page website scroll)
+window.onload = loadTheme();
 
-// "target" refers to element where the event occured & "dataset" refers to data-id element 
-/*
-function PageTransitions() {
-  allSections.addEventListener('click', (e) => {
-    const id = e.target.dataset.id;
-    if (id) {
+function loadTheme() {
+  const localTheme = localStorage.getItem("theme");
 
-      // Removes the "active" class from all buttons in the sectBtns array using the forEach method.
-      navBtns.forEach((btn) => {
-        btn.classList.remove('active')
-      });
+  if(localTheme !== null && localTheme === "night-theme"){
+    root.classList.remove("day-theme");
+    root.classList.add(localTheme);
 
-      // Adds the "active" class to the clicked button using e.target.classList.add('active').
-      e.target.classList.add('active');
+    theme.checked = true;
+  } 
+  // day theme is default, no need to load it.
+}
 
-      // Removes the "active" class from all sections in the sections array using the forEach method.
-      sections.forEach((section) => {
-        section.classList.remove('active')
-      });
+function changeThemes() {
+  if(theme.checked){
+    root.classList.remove('night-theme');
+    root.classList.add('day-theme');
+    localStorage.setItem("theme", "day-theme");
 
-      // Adds the "active" class to the section with the corresponding id using 
-      const element = document.getElementById(id);
-      element.classList.add('active');
+    theme.checkbox = false;
+  }
+  else{
+    root.classList.remove('day-theme');
+    root.classList.add('night-theme');
+    localStorage.setItem("theme", "night-theme");
 
-      // Scroll to the active class on click
-      element.scrollIntoView({ behavior: "smooth" });
-
-    }
-  })
+    theme.checkbox = true;
+  }
 };
 
-PageTransitions();*/
-
-const toggle = document.querySelector('.menu-toggle'); 
+// navbar is hidden on scroll
 var navbars = document.querySelectorAll('.navbar');
 var hideScroll = window.scrollY;
 
 window.onscroll = function() {
   var currentScrollPos = window.scrollY;
-  const checked = document.getElementById("nav-toggle").checked;
   
   navbars.forEach((nav) => {
     if(nav.style.display != "none"){
-      if (hideScroll > window.scrollY && checked == false) {
+      if (hideScroll > window.scrollY) {
         nav.style.top = "0";
       } 
       else {
-        if(checked == false){
-          nav.style.top = "-10rem";
-        }
+        nav.style.top = "-10rem";
       }
     }
   })
@@ -64,6 +57,8 @@ window.onscroll = function() {
 const navItemBtns = document.querySelectorAll('.menu-item-container'); 
 const navPages = document.querySelectorAll(".menu-item");
 let currentURL = window.location.href;
+
+// reading url to determine which buttons to highlight
 
 function btnHighlighs (){
   // Removes the "menu-item-container-style" class from all buttons in the navItemBtns array using the forEach method.

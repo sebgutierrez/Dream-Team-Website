@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="day-theme">
 
 <head>
     <meta charset="utf-8">
@@ -17,6 +17,23 @@
 		<div class="logo">
 			<span>Dream Team</span>
 		</div>
+		<label class="switch">
+			<input type="checkbox" class="theme-switch" id="theme-switch">
+			<svg class="night-theme-icon" id="night-theme-icon" width="62" height="62" viewBox="0 0 675 675" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="changeThemes()">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M494.5 453C365.542 453 261 339.728 261 200C261 118.817 296.29 46.5654 351.154 0.27124C346.625 0.0910645 342.073 0 337.5 0C151.104 0 0 151.104 0 337.5C0 523.896 151.104 675 337.5 675C515.785 675 661.783 536.76 674.151 361.623C631.32 417.454 566.741 453 494.5 453Z" fill="white"/>
+				</svg>
+			<svg class="day-theme-icon" id="day-theme-icon" width="62" height="62" viewBox="0 0 1255 1255" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="changeThemes()">
+				<circle cx="337.5" cy="337.5" r="337.5" transform="matrix(-1 0 0 1 964 287)" fill="white"/>
+				<rect x="1058.39" y="171" width="51" height="224" rx="25.5" transform="rotate(45 1058.39 171)" fill="white"/>
+				<rect x="328.393" y="900" width="51" height="224" rx="25.5" transform="rotate(45 328.393 900)" fill="white"/>
+				<rect x="601" width="51" height="224" rx="25.5" fill="white"/>
+				<rect x="601" y="1031" width="51" height="224" rx="25.5" fill="white"/>
+				<path d="M188.031 214.094C178.073 204.135 178.073 187.99 188.031 178.031V178.031C197.99 168.073 214.135 168.073 224.094 178.031L346.423 300.361C356.382 310.319 356.382 326.465 346.423 336.423V336.423C336.465 346.382 320.319 346.382 310.361 336.423L188.031 214.094Z" fill="white"/>
+				<path d="M919.031 943.094C909.073 933.135 909.073 916.99 919.031 907.031V907.031C928.99 897.073 945.135 897.073 955.094 907.031L1077.42 1029.36C1087.38 1039.32 1087.38 1055.46 1077.42 1065.42V1065.42C1067.46 1075.38 1051.32 1075.38 1041.36 1065.42L919.031 943.094Z" fill="white"/>
+				<path d="M25.5 648C11.4167 648 0 636.583 0 622.5V622.5C0 608.417 11.4167 597 25.5 597H198.5C212.583 597 224 608.417 224 622.5V622.5C224 636.583 212.583 648 198.5 648H25.5Z" fill="white"/>
+				<path d="M1056.5 646C1042.42 646 1031 634.583 1031 620.5V620.5C1031 606.417 1042.42 595 1056.5 595H1229.5C1243.58 595 1255 606.417 1255 620.5V620.5C1255 634.583 1243.58 646 1229.5 646H1056.5Z" fill="white"/>
+			</svg>
+		</label>
 		<nav class="nav-list-container">
 			<ul class="nav-list">
 				<li class="menu-item-container">
