@@ -33,8 +33,9 @@ function changeThemes() {
   }
 };
 
-// navbar is hidden on scroll
+// navbar and theme toggle is hidden on scroll
 var navbars = document.querySelectorAll('.navbar');
+var themeToggle = document.querySelector('.theme-toggle-button-container');
 var hideScroll = window.scrollY;
 
 window.onscroll = function() {
@@ -44,12 +45,17 @@ window.onscroll = function() {
     if(nav.style.display != "none"){
       if (hideScroll > window.scrollY) {
         nav.style.top = "0";
+        //we will also update the Y position of the theme toggle here too
+        themeToggle.style.bottom = "1.5rem";
       } 
       else {
         nav.style.top = "-10rem";
+        themeToggle.style.bottom = "-6rem";
       }
     }
   })
+
+
 
   hideScroll = currentScrollPos;
 };

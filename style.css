@@ -69,14 +69,17 @@ section{
   padding: 1rem;
   width: 100%;
   display: flex;
+  justify-content: flex-end;
   transition: top 0.3s;
   background-color: var(--theme-background-color);
   z-index: 3;
 }
 
 .logo { 
-  width: 50vw;
-  padding: 1rem 0 0 1rem;
+  width: fit-content;
+  position: absolute;
+  left: 0;
+  padding: 0.5rem 1rem 0 2rem;
 }
 
 .logo span{
@@ -132,10 +135,26 @@ section{
   display: none;
 }
 
+.theme-toggle-button-container {
+  position: fixed;
+  width: 100%;
+  bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: bottom 0.3s;
+  z-index: 5;
+}
+
 .night-theme-icon {
+  position: relative;
   display: block;
-  margin-right: 1.5rem;
   cursor: pointer;
+  z-index: 5;
+}
+
+.night-theme-svg-color {
+  fill: var(--theme-navbar-color);
 }
 
 .day-theme-icon {
@@ -147,9 +166,14 @@ section{
 }
 
 .theme-switch:checked ~ .day-theme-icon {
+  position: relative;
   display: block;
-  margin-right: 1.5rem;
   cursor: pointer;
+  z-index: 5;
+}
+
+.theme-switch:checked, .day-theme-svg-color {
+  fill: var(--theme-navbar-color);
 }
 
 .theme-switch:checked ~ .night-theme-icon {
@@ -174,7 +198,7 @@ section{
 .cloud-layer-1 {
   position: absolute;
   background-size: 100% 100%;
-  bottom: -1rem;
+  bottom: 0;
   z-index: 2;
 }
 
@@ -185,7 +209,7 @@ section{
 .cloud-layer-2 {
   position: absolute;
   background-size: 100% 100%;
-  bottom: 3rem;
+  bottom: 4rem;
   z-index: 1;
 }
 
@@ -196,7 +220,7 @@ section{
 .cloud-layer-3 {
   position: absolute;
   background-size: 100% 100%;
-  bottom: 7rem;
+  bottom: 8rem;
   z-index: 0;
 }
 

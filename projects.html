@@ -17,23 +17,6 @@
 		<div class="logo">
 			<span>Dream Team</span>
 		</div>
-		<label class="switch">
-			<input type="checkbox" class="theme-switch" id="theme-switch">
-			<svg class="night-theme-icon" id="night-theme-icon" width="62" height="62" viewBox="0 0 675 675" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="changeThemes()">
-				<path fill-rule="evenodd" clip-rule="evenodd" d="M494.5 453C365.542 453 261 339.728 261 200C261 118.817 296.29 46.5654 351.154 0.27124C346.625 0.0910645 342.073 0 337.5 0C151.104 0 0 151.104 0 337.5C0 523.896 151.104 675 337.5 675C515.785 675 661.783 536.76 674.151 361.623C631.32 417.454 566.741 453 494.5 453Z" fill="white"/>
-				</svg>
-			<svg class="day-theme-icon" id="day-theme-icon" width="62" height="62" viewBox="0 0 1255 1255" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="changeThemes()">
-				<circle cx="337.5" cy="337.5" r="337.5" transform="matrix(-1 0 0 1 964 287)" fill="white"/>
-				<rect x="1058.39" y="171" width="51" height="224" rx="25.5" transform="rotate(45 1058.39 171)" fill="white"/>
-				<rect x="328.393" y="900" width="51" height="224" rx="25.5" transform="rotate(45 328.393 900)" fill="white"/>
-				<rect x="601" width="51" height="224" rx="25.5" fill="white"/>
-				<rect x="601" y="1031" width="51" height="224" rx="25.5" fill="white"/>
-				<path d="M188.031 214.094C178.073 204.135 178.073 187.99 188.031 178.031V178.031C197.99 168.073 214.135 168.073 224.094 178.031L346.423 300.361C356.382 310.319 356.382 326.465 346.423 336.423V336.423C336.465 346.382 320.319 346.382 310.361 336.423L188.031 214.094Z" fill="white"/>
-				<path d="M919.031 943.094C909.073 933.135 909.073 916.99 919.031 907.031V907.031C928.99 897.073 945.135 897.073 955.094 907.031L1077.42 1029.36C1087.38 1039.32 1087.38 1055.46 1077.42 1065.42V1065.42C1067.46 1075.38 1051.32 1075.38 1041.36 1065.42L919.031 943.094Z" fill="white"/>
-				<path d="M25.5 648C11.4167 648 0 636.583 0 622.5V622.5C0 608.417 11.4167 597 25.5 597H198.5C212.583 597 224 608.417 224 622.5V622.5C224 636.583 212.583 648 198.5 648H25.5Z" fill="white"/>
-				<path d="M1056.5 646C1042.42 646 1031 634.583 1031 620.5V620.5C1031 606.417 1042.42 595 1056.5 595H1229.5C1243.58 595 1255 606.417 1255 620.5V620.5C1255 634.583 1243.58 646 1229.5 646H1056.5Z" fill="white"/>
-			</svg>
-		</label>
 		<nav class="nav-list-container">
 			<ul class="nav-list">
 				<li class="menu-item-container">
@@ -50,13 +33,28 @@
 				</li>
 			</ul>
 		</nav>
-		<!--
-		<label for="nav-toggle" class="nav-toggle-label">
-			<span></span>
-		</label>
-		-->
 	</div>
-
+	<div class="theme-toggle-button-container">
+		<label class="switch">
+			<input type="checkbox" class="theme-switch" id="theme-switch">
+			<svg class="day-theme-icon" id="day-theme-icon" width="90" height="90" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="changeThemes()">
+				<circle class="day-theme-svg-color" cx="150" cy="150" r="150"/>
+				<circle cx="47.0618" cy="47.0618" r="47.0618" transform="matrix(-1 0 0 1 197.422 103.02)" fill="white"/>
+				<rect x="210.584" y="86.8447" width="7.11155" height="31.2351" rx="3.55578" transform="rotate(45 210.584 86.8447)" fill="white"/>
+				<rect x="108.792" y="188.498" width="7.11155" height="31.2351" rx="3.55578" transform="rotate(45 108.792 188.498)" fill="white"/>
+				<rect x="146.805" y="63" width="7.11155" height="31.2351" rx="3.55578" fill="white"/>
+				<rect x="146.805" y="206.765" width="7.11155" height="31.2351" rx="3.55578" fill="white"/>
+				<path d="M89.2199 92.8542C87.8313 91.4655 87.8313 89.2141 89.2199 87.8255V87.8255C90.6085 86.4369 92.8599 86.4369 94.2485 87.8255L111.306 104.883C112.695 106.272 112.695 108.523 111.306 109.912V109.912C109.918 111.301 107.666 111.301 106.278 109.912L89.2199 92.8542Z" fill="white"/>
+				<path d="M191.152 194.507C189.763 193.119 189.763 190.867 191.152 189.479V189.479C192.54 188.09 194.792 188.09 196.18 189.479L213.238 206.537C214.627 207.925 214.627 210.177 213.238 211.565V211.565C211.849 212.954 209.598 212.954 208.209 211.565L191.152 194.507Z" fill="white"/>
+				<path d="M66.5558 153.358C64.592 153.358 63 151.766 63 149.803V149.803C63 147.839 64.592 146.247 66.5558 146.247H90.6793C92.6431 146.247 94.2351 147.839 94.2351 149.803V149.803C94.2351 151.766 92.6431 153.358 90.6793 153.358H66.5558Z" fill="white"/>
+				<path d="M210.32 153.08C208.357 153.08 206.765 151.488 206.765 149.524V149.524C206.765 147.56 208.357 145.969 210.32 145.969H234.444C236.408 145.969 238 147.56 238 149.524V149.524C238 151.488 236.408 153.08 234.444 153.08H210.32Z" fill="white"/>
+			</svg>
+			<svg class="night-theme-icon" id="night-theme-icon" width="90" height="90" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="changeThemes()">
+				<circle class="night-theme-svg-color" cx="150" cy="150" r="150"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M211.878 179.444C177.779 179.444 150.137 150.077 150.137 113.852C150.137 94.0425 158.402 76.2844 171.469 64.2574C164.97 62.7806 158.199 62 151.241 62C101.955 62 62 101.175 62 149.5C62 197.825 101.955 237 151.241 237C191.933 237 226.264 210.296 237 173.787C229.325 177.423 220.824 179.444 211.878 179.444Z" fill="white"/>
+			</svg>
+		</label>
+	</div>
 	<section class="section-projects" id="projects">
 		<div class="projects">
 			<div class="project-1">
