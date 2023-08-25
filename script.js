@@ -1,41 +1,50 @@
 
 var root = document.querySelector(':root');
-var theme = document.getElementById('theme-switch');
+var desktopTheme = document.getElementById('theme-switch');
+var mobileTheme = document.getElementById('mobile-theme-switch');
+
+function setDefaultTheme() {
+  //default theme
+  localStorage.setItem("theme", "day-theme");
+};
+
+setDefaultTheme();
 
 window.onload = loadTheme();
 
 function loadTheme() {
-  const localTheme = localStorage.getItem("theme");
+  var localTheme = localStorage.getItem("theme");
 
   if(localTheme !== null && localTheme === "night-theme"){
     root.classList.remove("day-theme");
     root.classList.add(localTheme);
-
-    theme.checked = true;
   } 
   // day theme is default, no need to load it.
-}
+};
+
+//helper function
+function replaceTheme(a, b) {
+  root.classList.remove(a);
+  root.classList.add(b);
+  localStorage.setItem("theme", b);
+};
 
 function changeThemes() {
-  if(theme.checked){
-    root.classList.remove('night-theme');
-    root.classList.add('day-theme');
-    localStorage.setItem("theme", "day-theme");
 
-    theme.checkbox = false;
+  const currentTheme = root.classList.contains("day-theme");
+
+  if(currentTheme !== null && currentTheme === true){
+    replaceTheme("day-theme","night-theme");
   }
   else{
-    root.classList.remove('day-theme');
-    root.classList.add('night-theme');
-    localStorage.setItem("theme", "night-theme");
-
-    theme.checkbox = true;
+    replaceTheme("night-theme","day-theme");
   }
+
 };
 
 // navbar and theme toggle is hidden on scroll
-var navbars = document.querySelectorAll('.navbar');
-var themeToggle = document.querySelector('.theme-toggle-button-container');
+var navbars = document.querySelectorAll('navbar');
+var themeToggle = document.querySelector('theme-toggle-button-container');
 var hideScroll = window.scrollY;
 
 window.onscroll = function() {
@@ -55,13 +64,11 @@ window.onscroll = function() {
     }
   })
 
-
-
   hideScroll = currentScrollPos;
 };
 
-const navItemBtns = document.querySelectorAll('.menu-item-container'); 
-const navPages = document.querySelectorAll(".menu-item");
+const navItemBtns = document.querySelectorAll('menu-item-container'); 
+const navPages = document.querySelectorAll("menu-item");
 let currentURL = window.location.href;
 
 // reading url to determine which buttons to highlight

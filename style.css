@@ -208,7 +208,7 @@ section{
 
   .mobile-navbar {
     position: fixed;
-    bottom: -0.75rem;
+    bottom: -0.7rem;
     width: 100%;
     display: flex;
     transition: bottom 0.3s;
@@ -231,6 +231,33 @@ section{
     font-weight: bold;
   }
 */
+
+  .mobile-night-theme-icon {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .mobile-day-theme-icon {
+    display: none;
+  }
+
+  .mobile-theme-switch:checked ~ .mobile-day-theme-icon {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .mobile-theme-switch:checked, .mobile-day-theme-svg-color {
+    fill: var(--theme-navbar-color);
+  }
+
+  .mobile-theme-switch:checked ~ .mobile-night-theme-icon {
+    display: none;
+  }
+
   .mobile-theme-toggle-button-container {
     position: relative;
     width: fit-content;
