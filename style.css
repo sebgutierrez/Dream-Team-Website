@@ -77,6 +77,7 @@ html, body{
   left: 0;
   padding: 0.5rem 1rem 0 2rem;
   font-size: 2rem;
+  color: white;
   font-weight: bold;
 }
 
@@ -822,147 +823,184 @@ html, body{
 
 .projects {
   position: relative;
-  top: 20vh;
+  top: 15vh;
   display: flex;
 }
 
 .project-1 {
   flex-basis: 50%;
-  margin: 0 0 0 12rem;
+  margin: 0 0 0 6rem;
 }
 
 .project-2 {
   flex-basis: 50%;
-  margin: 0 12rem 0 12rem;
-}
-
-@media (max-width: 1200px){
-
-  .projects {
-    top: 20vh;
-  }
-
-  .project-1 {
-    flex-basis: 50%;
-    margin: 0 0 0 6rem;
-  }
-
-  .project-2 {
-    flex-basis: 50%;
-    margin: 0 6rem 0 6rem;
-  }
-}
-
-@media (max-width: 1024px){
-
-  .projects {
-    top: 20vh;
-  }
-/*
-  .project-1 {
-    flex-basis: 50%;
-    margin: 0 0 0 6rem;
-  }
-
-  .project-2 {
-    flex-basis: 50%;
-    margin: 0 4rem 0 4rem;
-  }
-  */
-}
-
-@media (max-width: 768px){
-
-  .projects {
-    top: 10vh;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-1 {
-    margin: 0 12rem 0 12rem;
-  }
-
-  .project-2 {
-    margin: 2rem 12rem 0 12rem;
-  }
-
-}
-
-@media (max-width: 550px){
-
-  .projects {
-    top: 15vh;
-  }
-
-  .project-1 {
-    margin: 0 8rem 1rem 8rem;
-  }
-
-  .project-2 {
-    margin: 1rem 8rem 0 8rem;
-  }
+  margin: 0 6rem 0 6rem;
 }
 
 .project-card {
-  display: none;
-  background-color: var(--theme-navbar-color);
-  border-radius: 5rem;
-  padding: 1.5rem 4rem 2.75rem 4rem;
-}
-
-.project-cloud {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-  top: -2rem;
-}
-
-.project-cloud:hover {
-  display: none;
-}
-
-.project-cloud:hover + .project-card {
   display: block;
-}
-
-.project-cloud:hover + .github-button {
-  cursor: pointer;
+  position: relative;
+  height: 21rem;
+  background-color: var(--theme-navbar-color);
+  border-radius: 4rem;
+  padding: 1.5rem 4rem 2.75rem 4rem;
 }
 
 .project-name {
   position: relative;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: black;
+  color: white;
   z-index: 0;
 }
 
 .project-description{
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: white;
 }
 
+.github-button-container {
+  position: absolute;
+  width: 100%;
+  left: 0rem;
+  bottom: 2rem;
+}
+
 .github-button {
   position: relative;
-  top: 0.7rem;
-  margin: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: auto;
   background-color: white;
   border: none;
-  border-radius: 5rem;
-  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .github-link {
+  position: relative;
+  text-decoration: none;
+  top: 0.25rem;
   font-size: 1rem;
   font-weight: bold;
   color: black;
   margin-left: 0.5rem;
   cursor: pointer;
 }
+
+@media (max-width: 1060px){
+
+  .project-1 {
+    flex-basis: 50%;
+    margin: 0 0 0 4.5rem;
+  }
+  
+  .project-2 {
+    flex-basis: 50%;
+    margin: 0 4.5rem 0 4.5rem;
+  }
+
+  .project-card {
+    height: 21rem;
+  }
+  
+  .project-name {
+    font-size: 2rem;
+  }
+  
+  .project-description{
+    font-size: 0.7rem;
+  }
+  
+}
+
+@media (max-width: 812px){
+
+
+  .projects {
+    top: 10vh;
+    flex-direction: column;
+  }
+
+  .project-1 {
+    margin: 0 4rem 1.5rem 4rem;
+  }
+  
+  .project-2 {
+    margin: 0 4rem 0 4rem;
+  }
+
+  .project-card {
+    height: 12rem;
+  }
+  
+  .project-name {
+    font-size: 1.75rem;
+  }
+  
+  .project-description{
+    font-size: 0.6rem;
+  }
+
+  .github-button-container {
+    bottom: 1rem;
+  }
+  
+  .github-button {
+    border-radius: 0.75rem;
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  }
+  
+  .github-link {
+    font-size: 0.75rem;
+  }
+  
+}
+
+@media (max-width: 550px){
+
+  .projects {
+    top: 10vh;
+    flex-direction: column;
+  }
+
+  .project-1 {
+    margin: 0 4rem 2.5rem 4rem;
+  }
+
+  .project-card {
+    height: 12rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    border-radius: 2rem;
+  }
+  
+  .project-name {
+    font-size: 1.25rem;
+  }
+  
+  .project-description{
+    font-size: 0.4rem;
+  }
+
+  .github-button-container {
+    bottom: 1rem;
+  }
+  
+  .github-button {
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  }
+  
+  .github-link {
+    font-size: 0.5rem;
+  }
+
+  .github-icon {
+    width: 15px;
+    height: 15px;
+  }
+  
+}
+
 
 /* section projects ends here */
