@@ -243,11 +243,13 @@ html, body{
     position: absolute;
     width: 100%;
     text-align: center;
-    margin: 0.5rem 0 0 0;
     font-size: 1.5rem;
     font-weight: bold;
     z-index: 0;
+    color: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
     border-radius: 0.2rem;
+    background-color: var(--theme-navbar-color);
   }
 
   .logo { 
@@ -509,7 +511,7 @@ html, body{
 .about-description{
   color: white;
   text-align: left;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -531,7 +533,7 @@ html, body{
   background-color: var(--theme-navbar-color);
   border: none;
   border-radius: 5rem;
-  padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+  padding: 1rem 2rem 1rem 2rem;
   cursor: pointer;
 }
 
@@ -542,12 +544,28 @@ html, body{
 .coogs-button a{
   text-decoration: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
+.coco-btn-website-container {
+  top: 24vh;
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+.about-coco-website {
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
 .coco-btn-container {
-  top: 18vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -560,14 +578,14 @@ html, body{
 }
 
 .coco-waving {
-  max-width: 10vw;
+  max-width: 6vw;
   height: auto;
   object-fit: contain;
   margin-right: 4vw;
 }
 
 .coco-compooter {
-  max-width: 12.5vw;
+  max-width: 7.5vw;
   height: auto;
   object-fit: contain;
   margin-left: 4vw;
@@ -615,7 +633,7 @@ html, body{
     background-color: var(--theme-navbar-color);
     border: none;
     border-radius: 5rem;
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
     cursor: pointer;
   }
   
@@ -625,9 +643,14 @@ html, body{
     font-size: 1rem;
     font-weight: bold;
   }
+
+  .about-coco-website {
+    margin-right: 0.5rem;
+  }
+
 }
 
-@media (max-width: 500px){
+@media (max-width: 520px){
 
   .about-container{
     top: 5rem;
@@ -642,14 +665,14 @@ html, body{
     background-color: var(--theme-navbar-color);
     border: none;
     border-radius: 5rem;
-    padding: 0.25rem 1rem 0.25rem 1rem;
+    padding: 0.75rem 1rem 0.75rem 1rem;
     cursor: pointer;
   }
   
   .coogs-button a{
     text-decoration: none;
     color: white;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     font-weight: bold;
   }
 
@@ -659,6 +682,10 @@ html, body{
 
   .coco-compooter {
     max-width: 18vw;
+  }
+
+  .about-coco-website {
+    font-size: 0.75rem;
   }
 }
 
@@ -809,34 +836,72 @@ html, body{
   margin: 0 12rem 0 12rem;
 }
 
+@media (max-width: 1200px){
+
+  .projects {
+    top: 20vh;
+  }
+
+  .project-1 {
+    flex-basis: 50%;
+    margin: 0 0 0 6rem;
+  }
+
+  .project-2 {
+    flex-basis: 50%;
+    margin: 0 6rem 0 6rem;
+  }
+}
+
 @media (max-width: 1024px){
 
-.projects {
-  top: 25%;
-}
+  .projects {
+    top: 20vh;
+  }
+/*
+  .project-1 {
+    flex-basis: 50%;
+    margin: 0 0 0 6rem;
+  }
 
-.project-1 {
-  margin: 0 0 0 4rem;
-}
-
-.project-2 {
-  margin: 0 4rem 0 4rem;
-}
+  .project-2 {
+    flex-basis: 50%;
+    margin: 0 4rem 0 4rem;
+  }
+  */
 }
 
 @media (max-width: 768px){
 
-.projects {
-  top: 25%;
+  .projects {
+    top: 10vh;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-1 {
+    margin: 0 12rem 0 12rem;
+  }
+
+  .project-2 {
+    margin: 2rem 12rem 0 12rem;
+  }
+
 }
 
-.project-1 {
-  margin: 0 0 0 2rem;
-}
+@media (max-width: 550px){
 
-.project-2 {
-  margin: 0 2rem 0 2rem;
-}
+  .projects {
+    top: 15vh;
+  }
+
+  .project-1 {
+    margin: 0 8rem 1rem 8rem;
+  }
+
+  .project-2 {
+    margin: 1rem 8rem 0 8rem;
+  }
 }
 
 .project-card {
