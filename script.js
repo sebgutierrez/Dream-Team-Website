@@ -113,7 +113,7 @@ function btnHighlighs (){
 
 btnHighlighs();
 
-// makes the names of the pages visible or unvisible when toggled
+// makes the mobile navbar open and close
 
 var menuSwitch = document.querySelector('.menu-switch');
 var mobileMenuSwitch = document.querySelector('.mobile-menu-switch');
@@ -132,8 +132,6 @@ menuSwitch.addEventListener('click', () => {
     });
   }
 });
-
-// makes the names of the pages visible or unvisible when toggled
 
 menuSwitch.addEventListener('click', () => {
   if(menuSwitch.checked){

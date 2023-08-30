@@ -424,6 +424,93 @@ html, body{
   height: 100vh;
 }
 
+.home-slogan {
+  top: 7rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.home-projects-button-container {
+  top: 12rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-projects-button {
+  display: block;
+  border-radius: 4rem;
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 1rem 4rem 1rem 4rem; 
+  background-color: var(--theme-navbar-color);
+  border: none;
+  cursor: pointer;
+}
+
+.home-projects-button:hover { 
+  background-color: var(--theme-navbar-highlight-color);
+}
+
+.home-projects-message {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.home-projects-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 820px){
+  .home-slogan {
+    font-size: 1.75rem;
+  }
+
+  .home-projects-message {
+    font-size: 1.25rem;
+  }
+
+  .home-projects-link {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 520px){
+
+  .home-slogan {
+    top: 5rem;
+    font-size: 1.2rem;
+  }
+
+  .home-projects-message {
+    font-size: 1rem;
+  }
+
+  .home-projects-link {
+    font-size: 0.75rem;
+  }
+
+  .home-projects-button {
+    padding: 1rem 2rem 1rem 2rem; 
+  }
+}
+
 .clouds {
   display: flex;
   height: 100%;
