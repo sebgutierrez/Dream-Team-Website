@@ -17,6 +17,25 @@
 		<section class="section-projects" id="projects">
 			<nav class="navbar" id="nav">
 				<span class="logo">Dream Team</span>
+				<label class="switch theme-toggle-button-container" id="desktop-theme-toggle">
+                    <input type="checkbox" class="theme-switch" id="theme-switch">
+                    <svg onclick="changeThemes()" class="day-theme-icon" id="day-theme-icon" width="70" height="70" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="day-theme-svg-color" cx="150" cy="150" r="150"/>
+                        <circle cx="47.0618" cy="47.0618" r="47.0618" transform="matrix(-1 0 0 1 197.422 103.02)" fill="white"/>
+                        <rect x="210.584" y="86.8447" width="7.11155" height="31.2351" rx="3.55578" transform="rotate(45 210.584 86.8447)" fill="white"/>
+                        <rect x="108.792" y="188.498" width="7.11155" height="31.2351" rx="3.55578" transform="rotate(45 108.792 188.498)" fill="white"/>
+                        <rect x="146.805" y="63" width="7.11155" height="31.2351" rx="3.55578" fill="white"/>
+                        <rect x="146.805" y="206.765" width="7.11155" height="31.2351" rx="3.55578" fill="white"/>
+                        <path d="M89.2199 92.8542C87.8313 91.4655 87.8313 89.2141 89.2199 87.8255V87.8255C90.6085 86.4369 92.8599 86.4369 94.2485 87.8255L111.306 104.883C112.695 106.272 112.695 108.523 111.306 109.912V109.912C109.918 111.301 107.666 111.301 106.278 109.912L89.2199 92.8542Z" fill="white"/>
+                        <path d="M191.152 194.507C189.763 193.119 189.763 190.867 191.152 189.479V189.479C192.54 188.09 194.792 188.09 196.18 189.479L213.238 206.537C214.627 207.925 214.627 210.177 213.238 211.565V211.565C211.849 212.954 209.598 212.954 208.209 211.565L191.152 194.507Z" fill="white"/>
+                        <path d="M66.5558 153.358C64.592 153.358 63 151.766 63 149.803V149.803C63 147.839 64.592 146.247 66.5558 146.247H90.6793C92.6431 146.247 94.2351 147.839 94.2351 149.803V149.803C94.2351 151.766 92.6431 153.358 90.6793 153.358H66.5558Z" fill="white"/>
+                        <path d="M210.32 153.08C208.357 153.08 206.765 151.488 206.765 149.524V149.524C206.765 147.56 208.357 145.969 210.32 145.969H234.444C236.408 145.969 238 147.56 238 149.524V149.524C238 151.488 236.408 153.08 234.444 153.08H210.32Z" fill="white"/>
+                    </svg>
+                    <svg onclick="changeThemes()" class="night-theme-icon" id="night-theme-icon" width="70" height="70" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="night-theme-svg-color" cx="150" cy="150" r="150"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M211.878 179.444C177.779 179.444 150.137 150.077 150.137 113.852C150.137 94.0425 158.402 76.2844 171.469 64.2574C164.97 62.7806 158.199 62 151.241 62C101.955 62 62 101.175 62 149.5C62 197.825 101.955 237 151.241 237C191.933 237 226.264 210.296 237 173.787C229.325 177.423 220.824 179.444 211.878 179.444Z" fill="white"/>
+                    </svg>
+                </label>
 				<nav class="nav-list-container">
 					<ul class="nav-list">
 						<li class="menu-item-container">
@@ -98,50 +117,45 @@
                     </label>
                 </nav>
             </nav>
-            <label class="switch theme-toggle-button-container" id="desktop-theme-toggle">
-                <input type="checkbox" class="theme-switch" id="theme-switch">
-                <svg onclick="changeThemes()" class="day-theme-icon" id="day-theme-icon" width="90" height="90" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="day-theme-svg-color" cx="150" cy="150" r="150"/>
-                    <circle cx="47.0618" cy="47.0618" r="47.0618" transform="matrix(-1 0 0 1 197.422 103.02)" fill="white"/>
-                    <rect x="210.584" y="86.8447" width="7.11155" height="31.2351" rx="3.55578" transform="rotate(45 210.584 86.8447)" fill="white"/>
-                    <rect x="108.792" y="188.498" width="7.11155" height="31.2351" rx="3.55578" transform="rotate(45 108.792 188.498)" fill="white"/>
-                    <rect x="146.805" y="63" width="7.11155" height="31.2351" rx="3.55578" fill="white"/>
-                    <rect x="146.805" y="206.765" width="7.11155" height="31.2351" rx="3.55578" fill="white"/>
-                    <path d="M89.2199 92.8542C87.8313 91.4655 87.8313 89.2141 89.2199 87.8255V87.8255C90.6085 86.4369 92.8599 86.4369 94.2485 87.8255L111.306 104.883C112.695 106.272 112.695 108.523 111.306 109.912V109.912C109.918 111.301 107.666 111.301 106.278 109.912L89.2199 92.8542Z" fill="white"/>
-                    <path d="M191.152 194.507C189.763 193.119 189.763 190.867 191.152 189.479V189.479C192.54 188.09 194.792 188.09 196.18 189.479L213.238 206.537C214.627 207.925 214.627 210.177 213.238 211.565V211.565C211.849 212.954 209.598 212.954 208.209 211.565L191.152 194.507Z" fill="white"/>
-                    <path d="M66.5558 153.358C64.592 153.358 63 151.766 63 149.803V149.803C63 147.839 64.592 146.247 66.5558 146.247H90.6793C92.6431 146.247 94.2351 147.839 94.2351 149.803V149.803C94.2351 151.766 92.6431 153.358 90.6793 153.358H66.5558Z" fill="white"/>
-                    <path d="M210.32 153.08C208.357 153.08 206.765 151.488 206.765 149.524V149.524C206.765 147.56 208.357 145.969 210.32 145.969H234.444C236.408 145.969 238 147.56 238 149.524V149.524C238 151.488 236.408 153.08 234.444 153.08H210.32Z" fill="white"/>
-                </svg>
-                <svg onclick="changeThemes()" class="night-theme-icon" id="night-theme-icon" width="90" height="90" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle class="night-theme-svg-color" cx="150" cy="150" r="150"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M211.878 179.444C177.779 179.444 150.137 150.077 150.137 113.852C150.137 94.0425 158.402 76.2844 171.469 64.2574C164.97 62.7806 158.199 62 151.241 62C101.955 62 62 101.175 62 149.5C62 197.825 101.955 237 151.241 237C191.933 237 226.264 210.296 237 173.787C229.325 177.423 220.824 179.444 211.878 179.444Z" fill="white"/>
-                </svg>
-            </label>
 			<div class="projects">
 				<div class="project-1">				
-					<div class="project-card">
-						<span class="project-name">Spotify Bot</span>
-						<p class="project-description">
-							A React web application that generates a random playlist for Spotify users based on a random genre with a shuffle feature. Uses Spotify OAuth (Open Authorization) protocol to allow users to connect their Spotify accounts.
-						</p>
-						<div class="github-button-container">
-							<button class="github-button">
-								<svg onclick="window.open('https://github.com/jaykeburger/uni-meet')" class="github-icon" preserveAspectRatio="none" width="25" height="25" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="black"/></svg>
-								<a class="github-link" href="https://github.com/jaykeburger/uni-meet">GitHub Repo</a>
-							</button>
-						</div>
-					</div>
-				</div>
-				<div class="project-2">	
 					<div class="project-card">
 						<span class="project-name">Uni Meet</span>
 						<p class="project-description">
 							An Android application that allows users to connect with other students at their university. Users can match with other students based on hobbies, student organizations, and classes that they are taking. All this information is displayed on user profiles and stored in a Firebase real-time database.
 						</p>
 						<div class="github-button-container">
-							<button class="github-button">
-								<svg onclick="window.open('https://github.com/jaykeburger/uni-meet')" class="github-icon" preserveAspectRatio="none" width="25" height="25" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="black"/></svg>
-								<a class="github-link" onclick="window.open('https://github.com/jaykeburger/uni-meet')">GitHub Repo</a>
+							<button class="github-button" onclick="window.open('https://github.com/jaykeburger/uni-meet')">
+								<svg class="github-icon" preserveAspectRatio="none" width="25" height="25" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="black"/></svg>
+								<a class="github-link">GitHub</a>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="project-2">	
+					<div class="project-card">
+						<span class="project-name">Spotify Bot</span>
+						<p class="project-description">
+							A React web application that generates a random playlist for Spotify users based on a random genre with a shuffle feature. Uses Spotify OAuth (Open Authorization) protocol to allow users to connect their Spotify accounts.
+						</p>
+						<div class="github-button-container">
+							<button class="github-button" onclick="window.open('https://github.com/notgaby/dream-team-spotify')">
+								<svg class="github-icon" preserveAspectRatio="none" width="25" height="25" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="black"/></svg>
+								<a class="github-link">GitHub</a>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="project-3">	
+					<div class="project-card">
+						<span class="project-name">Twitter Bot</span>
+						<p class="project-description">
+							A Python application that uses Tweepy, an open-source Python library for accessing the Twitter API. The bot is programmed to tweet the current date and time in set intervals.
+						</p>
+						<div class="github-button-container">
+							<button class="github-button" onclick="window.open('https://github.com/notgaby/dream-team-twitter')">
+								<svg class="github-icon" preserveAspectRatio="none" width="25" height="25" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="black"/></svg>
+								<a class="github-link">GitHub</a>
 							</button>
 						</div>
 					</div>
