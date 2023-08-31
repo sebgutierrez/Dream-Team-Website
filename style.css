@@ -38,7 +38,7 @@ html, body{
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 /* Track */
@@ -245,12 +245,15 @@ html, body{
   }
 
   .mobile-navbar {
+    /*
     position: fixed;
     margin-top: 20vh;
     display: flex;
     border-radius: 0.5rem;
     background-color: var(--theme-navbar-color);
     z-index: 5;
+    */
+    display: none;
   }
 
   .mobile-logo { 
@@ -430,14 +433,14 @@ html, body{
   display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: white;
   text-align: center;
 }
 
 .home-projects-button-container {
-  top: 12rem;
+  top: 7rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -462,68 +465,82 @@ html, body{
 }
 
 .home-projects-message {
-  font-size: 2rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: white;
   text-align: center;
 }
 
 .home-projects-link {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   color: white;
   text-align: center;
   text-decoration: none;
 }
 
-@media (max-width: 820px){
-  .home-slogan {
-    font-size: 1.75rem;
-  }
-
-  .home-projects-message {
-    font-size: 1.25rem;
-  }
-
-  .home-projects-link {
-    font-size: 1rem;
-  }
-
+.coco-point {
+  position: relative;
+  top: 1rem;
+  width: 10rem;
 }
 
-@media (max-width: 520px){
-
+@media (max-width: 815px){
   .home-slogan {
-    top: 5rem;
-    font-size: 1.2rem;
+    font-size: 1.875rem;
   }
 
   .home-projects-message {
-    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
   }
 
   .home-projects-link {
-    font-size: 0.75rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 460px){
+
+  .home-slogan {
+    top: 8rem;
+    font-size: 1.5rem;
+    padding: 0 2rem 0 2rem;
   }
 
+  .home-projects-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .home-projects-button-container {
+    top: 8rem;
+  }
+  
   .home-projects-button {
-    padding: 1rem 2rem 1rem 2rem; 
+    padding: 1rem 2.5rem 1rem 2.5rem; 
+  }
+
+  .coco-point {
+    width: 10rem;
   }
 }
 
 .clouds {
   display: flex;
   height: 100%;
-  width: 100%;
-  flex-direction: column-reverse;  
+  width: fit-content;
+  flex-direction: column;  
   justify-content: end;
 }
 
 .cloud-layer-1 {
-  position: absolute;
-  background-size: 100% 100%;
-  bottom: 0vh;
-  z-index: 2;
+  position: fixed;
+  background-size: 100%;
+  bottom: 0;
+  /*top: 16rem;*/
+  z-index: 3;
 }
 
 .cloud-layer-1-path {
@@ -531,10 +548,11 @@ html, body{
 }
 
 .cloud-layer-2 {
-  position: absolute;
-  background-size: 100% 100%;
-  bottom: 8vh;
-  z-index: 1;
+  position: fixed;
+  background-size: 100%;
+  bottom: 40px;
+  /*top: 8rem;*/
+  z-index: 2;
 }
 
 .cloud-layer-2-path {
@@ -542,26 +560,29 @@ html, body{
 }
 
 .cloud-layer-3 {
-  position: absolute;
-  background-size: 100% 100%;
-  bottom: 16vh;
-  z-index: 0;
+  position: fixed;
+  background-size: 100%;
+  bottom: 80px;
+  /*top: 4rem;*/
+  z-index: 1;
 }
 
 .cloud-layer-3-path {
   fill: var(--theme-cloud-3-color);
 }
 
-@media (max-width: 840px){
+@media (max-width: 450px){
   .cloud-layer-1 {
-    bottom: 0vh;
+    bottom: 0;
   }
+  
   .cloud-layer-2 {
-    bottom: 4vh;
+    bottom: 25px;
   }
 
+  
   .cloud-layer-3 {
-    bottom: 8vh;
+    bottom: 50px;
   }
 }
 
@@ -571,7 +592,7 @@ html, body{
 
 .section-about {
   background-color: var(--theme-background-color);
-  height: 100vh
+  height: 100vh;
 }
 
 .about-container {
@@ -638,7 +659,7 @@ html, body{
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .coco-btn-container {
@@ -661,10 +682,11 @@ html, body{
 }
 
 .coco-compooter {
-  max-width: 7.5vw;
+  max-width: 10vw;
   height: auto;
   object-fit: contain;
-  margin-left: 4vw;
+  margin-left: 3vw;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 1024px){
@@ -680,6 +702,12 @@ html, body{
   
   .coogs-button a{
     font-size: 1rem;
+  }
+
+  .coco-compooter {
+    max-width: 10vw;
+    margin-left: 3vw;
+    margin-bottom: 0.5rem;
   }
 
 }
@@ -704,15 +732,15 @@ html, body{
 
 }
 
-@media (max-width: 520px){
+@media (max-width: 560px){
 
   .about-container{
     top: 5rem;
-    padding: 0 4rem 0 4rem;
+    padding: 0 2rem 0 2rem;
   }
 
   .about-description{
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .coogs-button {
@@ -728,11 +756,13 @@ html, body{
   }
 
   .coco-compooter {
-    max-width: 18vw;
+    max-width: 25vw;
+    margin-left: 0.25rem;
+    margin-bottom: 0.75rem;
   }
 
   .about-coco-website {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -862,7 +892,7 @@ html, body{
 
 .projects {
   position: relative;
-  top: 14vh;
+  top: 7rem;
   display: flex;
   justify-content: space-evenly;
 }
@@ -888,54 +918,37 @@ html, body{
   height: 21rem;
   background-color: var(--theme-navbar-color);
   border-radius: 4rem;
-  padding: 1.5rem 4rem 2.75rem 4rem;
+  padding: 1.5rem 3rem 2.75rem 3rem;
   z-index: 4;
 }
 
 .project-name {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: white;
   z-index: 0;
 }
 
 .project-description{
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: bold;
   color: white;
 }
 
-.github-button-container {
-  position: absolute;
-  width: 100%;
-  left: 0rem;
-  bottom: 2rem;
-}
-
-.github-button {
-  position: relative;
+.github-project-container {
   display: flex;
-  margin: auto;
-  background-color: white;
-  border: none;
-  border-radius: 2rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  cursor: pointer;
-}
-
-.github-link {
   position: relative;
-  text-decoration: none;
-  top: 0.25rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: black;
-  margin-left: 0.5rem;
-  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media (max-width: 1270px){
+.github-icon {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 1080px){
 
   .project-1 {
     flex-basis: 30%;
@@ -953,99 +966,73 @@ html, body{
   }
 
   .project-card {
-    height: 20rem;
+    height: 28rem;
   }
   
   .project-name {
     font-size: 1.5rem;
   }
   
-  .project-description{
-    font-size: 0.6rem;
-  }
-
-  .github-link {
-    font-size: 0.6rem;
-    top: 0.1rem;
-  }
-
   .github-icon {
-    width: 15px;
-    height: 15px;
+    width: 22px;
+    height: 22px;
   }
 
 }
-@media (max-width: 890px){
+@media (max-width: 850px){
 
   .projects {
-    top: 14vh;
+    top: 12vh;
     flex-direction: column;
   }
 
   .project-1 {
-    margin: 0 3.5rem 0rem 3.5rem;
+    margin: 0 1.5rem 0rem 1.5rem;
   }
   
   .project-2 {
-    margin: 0.75rem 3.5rem 0 3.5rem;
+    margin: 0.75rem 1.5rem 0 1.5rem;
   }
 
   .project-3 {
-    margin: 0.75rem 3.5rem 0 3.5rem;
+    margin: 0.75rem 1.5rem 0 1.5rem;
   }
 
   .project-card {
-    height: 8rem;
+    height: fit-content;
     border-radius: 2rem;
   }
   
   .project-name {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   
-  .project-description{
-    font-size: 0.5rem;
-  }
-
-  .github-button-container {
-    bottom: 1rem;
-  }
-  
-  .github-button {
-    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
-  }
-  
-  .github-link {
-    top: 0.15rem;
-    font-size: 0.5rem;
-    margin-left: 0.2rem;
-  }
-
   .github-icon {
-    width: 12px;
-    height: 12px;
+    width: 24px;
+    height: 24px;
   }
   
 }
 
 @media (max-width: 660px){
 
+  .section-projects {
+    height: max-content;
+  }
+
   .projects {
-    top: 8vh;
+    top: 6vh;
     flex-direction: column;
+    padding: 2rem 0 2rem 0;
   }
 
   .project-card {
-    height: 25vh;
+    height: fit-content;
     padding: 1.5rem 2rem 1.5rem 2rem;
   }
   
   .project-name {
-    font-size: 1rem;
-  }
-  
-  .project-description{
-    font-size: 0.4rem;
+    font-size: 1.5rem;
   }
 
 }
