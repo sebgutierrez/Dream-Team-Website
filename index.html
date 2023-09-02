@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="day-theme">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -15,65 +15,54 @@
 <body class="main-content">
     <main>
         <section class="section-home" id="home">
-            <span class="desktop-logo">Dream Team</span>
-			<div class="navbar-theme-toggle-container">
-				<label for="mobile-menu-toggle" class="mobile-menu-label">
-					<svg class="open-menu-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <header class="header" id="header">
+				<a class="home-link" href="./index.html"><span class="desktop-logo">Dream Team</span></a>
+				<div class="navlist-theme-toggle-container">
+					<label for="mobile-menu-toggle" class="mobile-menu-label">
+						<svg class="open-menu-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+							</svg>
+						<svg class="close-menu-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 						</svg>
-					<svg class="close-menu-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-					</svg>
-				</label> 
-				<input type="checkbox" class="mobile-menu-toggle" id="mobile-menu-toggle">
-				<nav class="navbar" id="nav">
-					<ul class="nav-list">
-						<li class="menu-item-container">
-							<svg class="home-svg" viewBox="0 0 78 68" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="window.open('http://127.0.0.1:5500/index.html', '_self')">
-								<path d="M4 34.4664L36.1426 5.08044C37.7221 3.63985 40.2779 3.63985 41.8538 5.08044L74 34.4664M12.0769 27.083V60.3083C12.0769 62.3461 13.8862 64 16.1154 64H30.9231V48.0026C30.9231 45.9648 32.7323 44.3109 34.9615 44.3109H43.0385C45.2677 44.3109 47.0769 45.9648 47.0769 48.0026V64H61.8846C64.1138 64 65.9231 62.3461 65.9231 60.3083V27.083M25.5385 64H55.1538" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg> 
-							<a href="./index.html" class="menu-item" id="menu-item-home" data-id="home">Home</a>
-						</li>
-						<li class="menu-item-container">
-							<svg class="about-svg" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="window.open('http://127.0.0.1:5500/about.html', '_self')">
-								<path d="M26.93 19.0633C30.8333 15.6467 37.1667 15.6467 41.07 19.0633C44.9767 22.48 44.9767 28.02 41.07 31.4367C40.3933 32.0333 39.6367 32.5233 38.8367 32.91C36.3533 34.1133 34.0033 36.24 34.0033 39V41.5M64 34C64 37.9397 63.224 41.8407 61.7164 45.4805C60.2087 49.1203 57.999 52.4274 55.2132 55.2132C52.4274 57.999 49.1203 60.2087 45.4805 61.7164C41.8407 63.224 37.9397 64 34 64C30.0603 64 26.1593 63.224 22.5195 61.7164C18.8797 60.2087 15.5726 57.999 12.7868 55.2132C10.001 52.4274 7.79125 49.1203 6.28361 45.4805C4.77597 41.8407 4 37.9397 4 34C4 26.0435 7.1607 18.4129 12.7868 12.7868C18.4129 7.16071 26.0435 4 34 4C41.9565 4 49.5871 7.16071 55.2132 12.7868C60.8393 18.4129 64 26.0435 64 34ZM34 51.5H34.0267V51.5267H34V51.5Z" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-							<a href="./about.html" class="menu-item" id="menu-item-about" data-id="about">About</a>
-						</li>
-						<li class="menu-item-container">
-							<svg class="team-svg" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="window.open('http://127.0.0.1:5500/team.html', '_self')">
-								<path d="M43.2325 57.7599C45.8569 58.5855 48.5763 59.003 51.3091 58.9999C55.704 59.0068 60.0418 57.9212 63.9887 55.8266C64.1053 52.839 63.3198 49.8915 61.7511 47.431C60.1825 44.9706 57.9162 43.1312 55.2957 42.1917C52.6753 41.2521 49.8436 41.2637 47.2297 42.2246C44.6159 43.1855 42.3625 45.0434 40.811 47.5166M43.2325 57.7599V57.7499C43.2325 54.04 42.3525 50.55 40.811 47.5166M43.2325 57.7599V58.1133C37.3111 61.9769 30.5271 64.0126 23.6147 63.9999C16.4426 63.9999 9.73211 61.8499 4.00308 58.1133L4 57.7499C3.99764 53.0315 5.44491 48.4464 8.11365 44.7175C10.7824 40.9886 14.5208 38.3281 18.7394 37.1553C22.9581 35.9825 27.4171 36.3642 31.4134 38.2403C35.4097 40.1163 38.716 43.3799 40.811 47.5166M34.002 15.25C34.002 18.2337 32.908 21.0951 30.9605 23.2049C29.0131 25.3147 26.3718 26.5 23.6178 26.5C20.8637 26.5 18.2224 25.3147 16.275 23.2049C14.3276 21.0951 13.2335 18.2337 13.2335 15.25C13.2335 12.2663 14.3276 9.40483 16.275 7.29505C18.2224 5.18526 20.8637 4 23.6178 4C26.3718 4 29.0131 5.18526 30.9605 7.29505C32.908 9.40483 34.002 12.2663 34.002 15.25ZM59.3857 22.75C59.3857 25.0706 58.5348 27.2962 57.0201 28.9372C55.5055 30.5781 53.4512 31.5 51.3091 31.5C49.167 31.5 47.1127 30.5781 45.5981 28.9372C44.0834 27.2962 43.2325 25.0706 43.2325 22.75C43.2325 20.4293 44.0834 18.2037 45.5981 16.5628C47.1127 14.9219 49.167 14 51.3091 14C53.4512 14 55.5055 14.9219 57.0201 16.5628C58.5348 18.2037 59.3857 20.4293 59.3857 22.75Z" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>     
-							<a href="./team.html" class="menu-item" id="menu-item-team" data-id="team">Team</a>
-						</li>
-						<li class="menu-item-container">
-							<svg class="projects-svg" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg" onclick="window.open('http://127.0.0.1:5500/projects.html', '_self')">
-								<path d="M50 14.0909L65 30L50 45.9091M20 45.9091L5 30L20 14.0909M41.4286 5L28.5714 55" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-							<a href="./projects.html" class="menu-item" id="menu-item-projects" data-id="projects">Projects</a>
-						</li>
-					</ul>
-				</nav>
-				<label for="theme-toggle" class="theme-toggle-container" id="desktop-theme-label">
-					<input type="checkbox" class="theme-toggle" id="theme-toggle">
-					<svg class="day-theme-icon" id="day-theme-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<circle class="day-theme-svg-color" cx="14" cy="14" r="14" fill="#202547"/>
-						<path d="M14 5V7.25M20.364 7.63604L18.773 9.22703M23 14H20.75M20.364 20.364L18.773 18.773M14 20.75V23M9.22703 18.773L7.63604 20.364M7.25 14H5M9.22703 9.22703L7.63604 7.63604M17.75 14C17.75 16.0711 16.0711 17.75 14 17.75C11.9289 17.75 10.25 16.0711 10.25 14C10.25 11.9289 11.9289 10.25 14 10.25C16.0711 10.25 17.75 11.9289 17.75 14Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-						<circle cx="14" cy="14" r="4" fill="white"/>
-					</svg>
-					<svg class="night-theme-icon" id="night-theme-icon" width="28" height="28" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<circle class="night-theme-svg-color" cx="150" cy="150" r="150"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M211.878 179.444C177.779 179.444 150.137 150.077 150.137 113.852C150.137 94.0425 158.402 76.2844 171.469 64.2574C164.97 62.7806 158.199 62 151.241 62C101.955 62 62 101.175 62 149.5C62 197.825 101.955 237 151.241 237C191.933 237 226.264 210.296 237 173.787C229.325 177.423 220.824 179.444 211.878 179.444Z" fill="white"/>
-					</svg>
-				</label>
-			</div>
-            <span class="home-slogan">Don't Just Dream it, Create it!</span>
-            <div class="home-projects-button-container">
-                <img class="coco-point" src="img/coco-point+border.png">
-                <span class="home-projects-message">View our projects here.</span>
-                <a class="home-projects-link home-projects-button" href="./projects.html">
-                    Projects
-                </a>
+					</label> 
+					<input type="checkbox" class="mobile-menu-toggle" id="mobile-menu-toggle">
+					<nav class="navbar" id="nav">
+						<ul class="nav-list">
+							<li class="menu-item-container">
+								<a href="./index.html" class="menu-item" id="menu-item-home" data-id="home">Home</a>
+							</li>
+							<li class="menu-item-container">
+								<a href="./about.html" class="menu-item" id="menu-item-about" data-id="about">About</a>
+							</li>
+							<li class="menu-item-container">  
+								<a href="./team.html" class="menu-item" id="menu-item-team" data-id="team">Team</a>
+							</li>
+							<li class="menu-item-container">
+								<a href="./projects.html" class="menu-item" id="menu-item-projects" data-id="projects">Projects</a>
+							</li>
+						</ul>
+					</nav>
+					<label for="theme-toggle" class="theme-toggle-container" id="desktop-theme-label">
+						<input type="checkbox" class="theme-toggle" id="theme-toggle">
+						<svg class="night-theme-icon" id="night-theme-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle class="night-theme-svg-color" cx="14" cy="14" r="14" fill="#202547"/>
+							<path d="M14 5V7.25M20.364 7.63604L18.773 9.22703M23 14H20.75M20.364 20.364L18.773 18.773M14 20.75V23M9.22703 18.773L7.63604 20.364M7.25 14H5M9.22703 9.22703L7.63604 7.63604M17.75 14C17.75 16.0711 16.0711 17.75 14 17.75C11.9289 17.75 10.25 16.0711 10.25 14C10.25 11.9289 11.9289 10.25 14 10.25C16.0711 10.25 17.75 11.9289 17.75 14Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<circle cx="14" cy="14" r="4" fill="white"/>
+						</svg>
+						<svg class="day-theme-icon" id="day-theme-icon" width="28" height="28" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle class="day-theme-svg-color" cx="150" cy="150" r="150"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M211.878 179.444C177.779 179.444 150.137 150.077 150.137 113.852C150.137 94.0425 158.402 76.2844 171.469 64.2574C164.97 62.7806 158.199 62 151.241 62C101.955 62 62 101.175 62 149.5C62 197.825 101.955 237 151.241 237C191.933 237 226.264 210.296 237 173.787C229.325 177.423 220.824 179.444 211.878 179.444Z" fill="white"/>
+						</svg>
+					</label>
+				</div>
+			</header>
+            <div class="home-content">
+                <img src="img/DREAM_BIG_75.png"
+                    srcset="img/DREAM_BIG_75.png 480w,
+                            img/DREAM_BIG_50.png 768w,
+                            img/DREAM_BIG.png"       
+                class="dream-big-cloud" >
             </div>
             <div class="clouds">
 				<svg class="cloud-layer-3" preserveAspectRatio="none" viewBox="0 0 776 83" fill="none" xmlns="http://www.w3.org/2000/svg">

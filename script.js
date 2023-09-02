@@ -1,7 +1,7 @@
 
 const root = document.querySelector(':root');
-var desktopTheme = document.querySelector('.theme-toggle');
-const desktopNavbar = document.querySelector('.navbar');
+var themeToggle = document.querySelector('.theme-toggle');
+const header = document.querySelector('.header');
 
 window.onload = loadTheme();
 
@@ -10,9 +10,12 @@ function loadTheme() {
   if(localTheme !== null && localTheme === "night-theme"){
     root.classList.remove("day-theme");
     root.classList.add(localTheme);
-    desktopTheme.checked = true;
+    themeToggle.checked = true;
   } 
-  // day theme is default, no need to load it.
+  else if(localTheme !== null && localTheme === "day-theme"){
+    root.classList.remove("night-theme");
+    root.classList.add(localTheme);
+  }
 };
 
 //helper function
@@ -24,13 +27,18 @@ function replaceTheme(a, b) {
 };
 
 function changeThemes() {
-  if(desktopTheme.checked){
+  if(themeToggle.checked){
     replaceTheme("night-theme","day-theme");
   }
   else{
     replaceTheme("day-theme","night-theme");
   }
 };
+
+const nightIcon = document.getElementById('night-theme-icon');
+const dayIcon = document.getElementById('day-theme-icon');
+nightIcon.addEventListener('click', changeThemes);
+dayIcon.addEventListener('click', changeThemes);
 
 var openMenuSVG = document.querySelector('.open-menu-svg');
 var closeMenuSVG = document.querySelector('.close-menu-svg');
@@ -45,55 +53,47 @@ function changeMenuToggleStyle() {
     closeMenuSVG.style.display = "none";
   }
 }
+
 menuToggle.addEventListener('click', changeMenuToggleStyle);
 
-const nightIcon = document.getElementById('night-theme-icon');
-const dayIcon = document.getElementById('day-theme-icon');
+// header is hidden on scroll
 
-nightIcon.addEventListener('click', changeThemes);
-dayIcon.addEventListener('click', changeThemes);
-
-// navbar and theme toggle is hidden on scroll
-/*
 var hideScroll = window.scrollY;
 
 window.onscroll = function() {
-  const pageWidth  = document.body.clientWidth;
   var currentScrollPos = window.scrollY;
-  if(desktopNavbar.style.display !== "none" && pageWidth > 870){
+  if(menuToggle.checked == false){
     if (hideScroll > window.scrollY) {
-      desktopNavbar.style.top = "0";
+      header.style.top = "0";
     } 
     else {
-      desktopNavbar.style.top = "-10rem";
+      header.style.top = "-10rem";
     }
   }
   hideScroll = currentScrollPos;
 };
-*/
+
 // reading url to determine which buttons to highlight
 
-const desktopItemBtns = document.querySelectorAll('.menu-item-container'); 
-const desktopPages = document.querySelectorAll('.menu-item');
+const menuBtns = document.querySelectorAll('.menu-item-container'); 
+const links = document.querySelectorAll('.menu-item');
 let currentURL = window.location.href;
 
 function btnHighlighs (){
-  if(desktopNavbar.style.display !== null){
-    desktopItemBtns.forEach((btn) => {
-      btn.classList.remove('menu-item-container-style');
-    });
-    desktopPages.forEach((page) => {
-      let navPage = page.dataset.id;
-      if(currentURL.includes("index") && navPage == "home"){
-        let parent = page.parentElement;
-        parent.classList.add('menu-item-container-style');
-      }
-      else if(currentURL.includes(navPage)){
-        let parent = page.parentElement;
-        parent.classList.add('menu-item-container-style');
-      }
-    });
-  }
+  menuBtns.forEach((btn) => {
+    btn.classList.remove('menu-item-container-style');
+  });
+  links.forEach((page) => {
+    let link = page.dataset.id;
+    if(currentURL.includes("index") && link == "home"){
+      let parent = page.parentElement;
+      parent.classList.add('menu-item-container-style');
+    }
+    else if(currentURL.includes(link)){
+      let parent = page.parentElement;
+      parent.classList.add('menu-item-container-style');
+    }
+  });
 };
 
 btnHighlighs();
