@@ -64,10 +64,10 @@ window.onscroll = function() {
   var currentScrollPos = window.scrollY;
   if(menuToggle.checked == false){
     if (hideScroll > window.scrollY) {
-      header.style.top = "0";
+      header.style.transform = "translateY(0)";
     } 
     else {
-      header.style.top = "-10rem";
+      header.style.transform = "translateY(-5.5rem)";
     }
   }
   hideScroll = currentScrollPos;
